@@ -179,7 +179,7 @@ class API4:
                 sort_by (Optional[str]): Choose a sort option for the list of results. Allowed Values: ``first_air_date.asc``, ``first_air_date.desc``, ``name.asc``, ``name.desc``, ``vote_average.asc``, ``vote_average.desc``
                 page (Optional[int]): Specify which page to query.
         """
-        return self._get(f"/account/{account_id if account_id else self.account_id}/tv/rated", sort_by=sort_by, page=page)
+        return self._get(f"/account/{account_id if account_id else self.account_id}/tv/recommendations", sort_by=sort_by, page=page)
 
     def account_get_movie_watchlist(
             self, account_id: Optional[str] = None,
